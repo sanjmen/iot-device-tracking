@@ -1,16 +1,26 @@
 <template>
-  <div id="app">
-    <section v-if="errored">
-      <p>
-        We're sorry, we're not able to retrieve this information at the moment,
-        please try back later
-      </p>
-    </section>
+  <div>
+    <header class="header">
+      <p>Devices Tracking</p>
+    </header>
+    <div id="app">
+      <section v-if="errored">
+        <p>
+          We're sorry, we're not able to retrieve this information at the
+          moment, please try back later
+        </p>
+      </section>
 
-    <section v-else>
-      <div v-if="loading">Loading...</div>
-      <Map v-else :center="{ lat, lng }" :zoom="zoom" :devices="devices"></Map>
-    </section>
+      <section v-else>
+        <div v-if="loading">Loading...</div>
+        <Map
+          v-else
+          :center="{ lat, lng }"
+          :zoom="zoom"
+          :devices="devices"
+        ></Map>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -56,12 +66,32 @@ export default {
 </script>
 
 <style>
-#app {
+body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 0.25rem;
+  font-size: 16px;
+  line-height: 1.25;
+  color: hsla(0, 0%, 100%, 0.7);
+  background-color: #24292e;
+  text-transform: capitalize;
 }
 </style>

@@ -49,8 +49,7 @@ export default {
 
 <style scoped>
 .map {
-  height: 800px;
-  padding: 1em;
-  width: 95%;
+  height: calc(100vh - 72px);
+  padding: 0.25em;
 }
 </style>
