@@ -1,17 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Map
+      v-if="!isLoading"
+      :center="{ lat, lng }"
+      :zoom="zoom"
+      :devices="devices"
+    ></Map>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import devices from "./data/devices.json";
+import Map from "./components/Map.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
+    Map
+  },
+  data() {
+    return {
+      lat: 47.41322,
+      lng: -1.219482,
+      devices: [],
+      isLoading: true,
+      zoom: 6
+    };
+  },
+  mounted() {
+    this.fetchDevices();
+  },
+  methods: {
+    fetchDevices() {
+      this.devices = devices;
+      this.isLoading = false;
+    }
   }
 };
 </script>
