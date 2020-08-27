@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - 12.18.3
+install:
+  - yarn install
+script:
+  - yarn test:unit
+  - yarn build
+deploy:
+  - provider: firebase
+    skip_cleanup: true
+    token: { FIREBASE_TOKEN }
+    message: "travis deploy"
+    on:
+      repo: sanjmen/iot-device-tracking
+      all_branches: true
