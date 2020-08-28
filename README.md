@@ -1,13 +1,13 @@
-We,re a tracking company and we love maps.
-We'd like to provide feedback to our customers about their devices and for that we'd like to provide them a map in wich they could easily identify where their devices are.
-We'd like to be able to show the information related wich each device in a popup with its correspondent data when we click on the device location. We'd like to show the information using icons and colors.
+We're a tracking company and we love maps.
+We'd like to provide feedback to our customers about their devices and for that we'd like to provide them a map in which they could easily identify where their devices are.
+We'd like to be able to show the information related with each device in a popup with its correspondent data when we click on the device location. We'd like to show the information using icons and colors.
 
-This project is an sample of how an application of these characteristics can be developed.
+This project is a sample of how an application of these characteristics can be developed.
 The stack used is: **Vue.js** as base framework, **leaflet.js** to provide the map, **FontAwesome** for the icons. We use **lint** and **prettier** to format and **lint** the code. Also we provide a **Dockerfile** and a **nginx** configuration to easily build and run the application in a **docker** container. We integrate this repository with **Travis CI** so we can lint, **unit test**, and finally deploy the resulting application to **Firebase hosting**.
 
 You can see the result demo [here](https://device-tracking-5e5a4.web.app/)
 
-As i said this is a demo that needs more work, optimization work above all, since the result bundle its exceding the recomended limits and that have penalties, also it loads all the points at once... [read more](README.md#TODO)
+As i said this is a demo that needs more work, optimization work above all, since the result bundle it's exceeding the recommended limits and that has penalties, also it loads all the points at once... [read more](README.md#TODO)
 
 ## Setup with docker
 
