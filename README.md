@@ -9,6 +9,9 @@ You can see the result demo [here](https://device-tracking-5e5a4.web.app/)
 
 As i said this is a demo that needs more work, optimization work above all, since the result bundle it's exceeding the recommended limits and that has penalties, also it loads all the points at once... [read more](README.md#TODO)
 
+## Build Status
+[![Build Status](https://travis-ci.com/sanjmen/iot-device-tracking.svg?branch=master)](https://travis-ci.com/sanjmen/iot-device-tracking)
+
 ## Setup with docker
 
 1. clone this repo
